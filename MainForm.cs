@@ -18,7 +18,6 @@ namespace MessageBox_Display
         MessageBoxIcon Icons;
         private void ButtonShow_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(TextboxDesc.Text, TextboxTitle.Text, Buttons, Icons);
             switch (ComboBoxButtons.Text)
             {
                 case "OK":
@@ -70,6 +69,7 @@ namespace MessageBox_Display
                     Icons = MessageBoxIcon.Information;
                     break;
             }
+            MessageBox.Show(TextboxDesc.Text, TextboxTitle.Text, Buttons, Icons);
         }
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
